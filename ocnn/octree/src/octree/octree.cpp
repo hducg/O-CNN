@@ -242,7 +242,9 @@ void Octree::calc_node_num() {
   oct_info_.set_nnum_cum();
   oct_info_.set_ptr_dis(); // !!! note: call this function to update the ptr
 }
-
+//wjcao - begin
+extern string label_index_name;
+//wjcao - end
 // compute the average signal for the last octree layer
 void Octree::calc_signal(const Points& point_cloud, const vector<float>& pts_scaled,
     const vector<uint32>& sorted_idx, const vector<uint32>& unique_idx) {
@@ -310,6 +312,12 @@ void Octree::calc_signal(const Points& point_cloud, const vector<float>& pts_sca
     avg_labels_[depth].assign(nnum, -1.0f);   // initialize as -1
     const int npt = point_cloud.info().pt_num();
     max_label_ = static_cast<int>(*std::max_element(labels, labels + npt)) + 1;
+	
+	//begin write index in avg_labels_ for each point, wjcao
+	std::vector<int> label_index;
+	label_index.resize(npt + 1);
+	label_index[0] = npt;
+	//end write index in avg_labels_ for each point, wjcao
 
     #pragma omp parallel for
     for (int i = 0; i < nnum; i++) {
@@ -319,12 +327,23 @@ void Octree::calc_signal(const Points& point_cloud, const vector<float>& pts_sca
       vector<int> avg_label(max_label_, 0);
       for (uint32 j = unique_idx[t]; j < unique_idx[t + 1]; j++) {
         int h = sorted_idx[j];
+		//begin write index in avg_labels_ for each point, wjcao
+		label_index[h + 1] = i;
+		//end write index in avg_labels_ for each point, wjcao
         avg_label[static_cast<int>(labels[h])] += 1;
       }
 
       avg_labels_[depth][i] = static_cast<float>(std::distance(avg_label.begin(),
                   std::max_element(avg_label.begin(), avg_label.end())));
     }
+
+	//begin write index in avg_labels_ for each point, wjcao	
+	std::ofstream outfile(label_index_name, std::ios::binary);
+	if (!outfile)
+		std::cout << "cannot open label index file " << std::endl;
+	outfile.write((char*)(label_index.data()), label_index.size() * sizeof(int));
+	outfile.close();	
+	//end write index in avg_labels_ for each point, wjcao
   }
 
   if (oct_info_.has_displace() && normals != nullptr) {
