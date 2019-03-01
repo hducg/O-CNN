@@ -82,7 +82,7 @@ def generate_points():
             
 
 def generate_label_files():
-    octree_list_path = list_dir + category_name + '_octree.txt'
+    octree_list_path = list_dir + category_name + '_octree_shuffle.txt'
     f = open(octree_list_path, 'r')
     lines = f.readlines()
     f.close()
@@ -136,34 +136,21 @@ upgrade_points = 'F:/wjcao/github/hducg/O-CNN/ocnn/octree/build/Release/upgrade_
 octree = 'F:/wjcao/github/hducg/O-CNN/ocnn/octree/build/Release/octree.exe'
 convert_octree_data = ''
 caffe = ''
-if __name__ == '__main__':
-#1. shape_drain --> shape, label_map, id_map, shape_name    
-#    generate_shapes()
-#    generate_paths_file(shape_dir, list_dir, 'step')    
-
-#2. shape, label_map, id_map --> point_cloud.py --> *.points, *.face_index, *.points_truth    
-#    generate_points()
-#    generate_paths_file(points_dir, list_dir, 'points')
-    
-#3. filenames, output_path --> upgrade_points.py --> *.upgrade.points
-#    points_list = list_dir + category_name + '_points.txt'
-#    subprocess.check_call([upgrade_points, '--filenames', points_list, '--output_path', points_dir])
-#    generate_paths_file(points_dir, list_dir, 'upgrade.points')
-    
-#4. filenames, output_path --> octree.exe --> *.octree, *.label_index
-#    upgrade_list = list_dir + category_name + '_upgrade.points.txt'
-#    subprocess.check_call([octree, '--filenames', upgrade_list, '--output_path', octree_dir, '--depth', '6', '--rot_num', '1'])
-#    generate_paths_file(octree_dir, list_dir, 'octree')
-#5. rootfolder, listfile, db_name --> convert_octree_data --> lmdb, octree_list_name
+if __name__ == '__main__':   
+#1. filenames, output_path --> octree.exe --> *.octree, *.label_index
+    upgrade_list = list_dir + category_name + '_upgrade.points.txt'
+    subprocess.check_call([octree, '--filenames', upgrade_list, '--output_path', octree_dir, '--depth', '6', '--rot_num', '1'])
+    generate_paths_file(octree_dir, list_dir, 'octree')
+#2. rootfolder, listfile, db_name --> convert_octree_data --> lmdb, octree_list_name
     if os.path.exists(lmdb_dir):
         os.remove(lmdb_dir)
     octree_list = list_dir + category_name + '_octree.txt'
     subprocess.check_call([convert_octree_data, root_dir, octree_list, lmdb_dir])
-#6. prototxt, caffemodel --> caffe test --> *.label_groundtruth, *.label_predicted
+#3. prototxt, caffemodel --> caffe test --> *.label_groundtruth, *.label_predicted
     blob_prefix = feature_dir
     model_path = ''
     weights_path = ''        
     subprocess.check_call([caffe, 'test', '--model=' + model_path, '--weights=' + weights_path, '--gpu=0', '--blob_prefix=' + blob_prefix, 
     '--binary_mode=false', '--save_seperately=true', '--iterations=' + str(num_shapes)])    
-#7. generate label files
+#4. generate label files
     generate_label_files()

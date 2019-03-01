@@ -117,15 +117,17 @@ input
 output
     uvs:    [[float,float]]
 '''    
-def uvs_from_interpolation(uv1, uv2, uv3, N1, N2):
+def uvs_from_interpolation(uv1, uv2, uv3, Nv, Nh):
     uvs = []
-    for i in range(N1 + 1):#[0, N1]
-        t1 = i / N1#[0, 1]
+    for i in range(Nv + 1):#[0, Nv]
+        t1 = i / Nv#[0, 1]
         uv12 = np.multiply(uv2, t1) + np.multiply(uv1, 1 - t1)#[uv1, uv2]
         uv13 = np.multiply(uv3, t1) + np.multiply(uv1, 1 - t1)#[uv1, uv3]
-        N12 = int(N2 * t1) + 1 #[1, N2 + 1]
-        for j in range(N12):#[0, 1] [0, N2]
-            t2 = j / N12 #[0, 1]
+        N = int(Nh * t1) #[1, N2 + 1]
+        if N == 0:
+            N = 1
+        for j in range(N + 1):#[0, 1] [0, N2]
+            t2 = j / N #[0, 1]
             uv = np.multiply(uv12, t2) + np.multiply(uv13, 1 - t2)#uv12 * t2 + uv13 * (1 - t2)
             uvs.append(uv)
             
@@ -147,18 +149,24 @@ def points_sample_from_triangle(t):
     samples = []
     normals = []
 
-    p1 = np.array(t[0][0])
-    p2 = np.array(t[0][1])
-    p3 = np.array(t[0][2])
+    p = np.array([np.array(t[0][0]), np.array(t[0][1]), np.array(t[0][2])])
+    l = np.array([np.sum(np.square(p[1] - p[2])), np.sum(np.square(p[0] - p[2])), np.sum(np.square(p[0] - p[1]))])
+    li = np.argsort(l)
+    l = l[li]       
+    
     resolution = t[3]
-    N1 = int(np.sqrt(np.sum(np.square(p1 - p2))) / resolution) 
-    N2 = int(np.sqrt(np.sum(np.square(p1 - p3))) / resolution)
+    Nv = int(np.sqrt(l[2]) / resolution)
+    if Nv == 0:
+        Nv = 1
+    Nh = int(np.sqrt(l[0]) / resolution)
+    if Nh == 0:
+        Nh =1 
+        
+    uv0 = t[1][li[0]]
+    uv1 = t[1][li[1]]
+    uv2 = t[1][li[2]]
     
-    uv1 = t[1][0]
-    uv2 = t[1][1]
-    uv3 = t[1][2]
-    
-    uvs = uvs_from_interpolation(uv1,uv2,uv3,N1,N2)
+    uvs = uvs_from_interpolation(uv0,uv1,uv2,Nv,Nh)
     f = t[2]
     surf = BRep_Tool_Surface(f)
     for uv in uvs:
@@ -207,7 +215,8 @@ output
     cloud_segs:     [int]
     face_ids:       [int]
 '''    
-def point_cloud_from_labeled_shape(shape, label_map, id_map, resolution=0.1):    
+def point_cloud_from_labeled_shape(shape, label_map, id_map, resolution=0.1): 
+    print('point_cloud_from_labeled_shape')
     cloud_pts = []
     cloud_normals = []
     cloud_segs = []
@@ -235,25 +244,3 @@ def resolution_from_shape(shape):
     
     return resolution        
 
-        
-if __name__ == '__main__':
-    print('test point_cloud.py')
-    import random
-    from model_factory import shape_drain
-    from OCC.Display.SimpleGui import init_display
-    from data_render import display_point_cloud
-
-    occ_display, start_occ_display, add_menu, add_function_to_menu = init_display()    
-    occ_display.EraseAll()
-    
-    random.seed()
-
-    shape, name_map, shape_name = shape_drain()
-    pts, normals, segs = point_cloud_from_labeled_shape(shape, name_map)
-    
-    ais_context = occ_display.GetContext().GetObject()
-    display_point_cloud(pts,segs,ais_context)
-        
-    occ_display.View_Iso()
-    occ_display.FitAll()
-    start_occ_display()

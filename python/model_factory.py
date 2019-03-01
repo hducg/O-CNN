@@ -471,7 +471,8 @@ output
     id_map:         {TopoDS_Face: int}
     shape_name:     ''
 '''                
-def shape_drain():    
+def shape_drain():
+    print('shape_drain')    
 #    step1, create the base
     base = shape_base_drain()    
     

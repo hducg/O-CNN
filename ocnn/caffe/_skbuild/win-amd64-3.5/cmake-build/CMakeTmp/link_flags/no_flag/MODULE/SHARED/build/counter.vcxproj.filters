@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\counter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FD7E50A9-6C4F-3A20-A227-4001BDA5AE20}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

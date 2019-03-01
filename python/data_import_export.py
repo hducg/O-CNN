@@ -96,6 +96,12 @@ def upgraded_point_cloud_from_file(filename):
     for i in range(8):
         ptr_dis_.append(struct.unpack('i',f.read(4))[0])
     
+    print(magic_str_)
+    print(npt)
+    print(content_flags_)
+    print(channels_)
+    print(ptr_dis_)
+    
     pts = []    
     for i in range(npt):
         x = struct.unpack('f', f.read(4))[0]
@@ -129,6 +135,65 @@ def upgraded_point_cloud_from_file(filename):
     return pts, normals, features, labels
 
 
+def upgraded_point_cloud_to_file(filename, pts, normals, features, labels):
+    print('upgraded_point_cloud_to_file')
+    npt = len(pts)
+    if len(normals) != npt and len(features) != npt:
+        print('either normal or feature info is not correct')
+        return npt
+    
+    f = open(filename, 'wb')
+    magic_str = '_POINTS_1.0_\0\0\0\0'  
+    for i in range(16):
+        f.write(struct.pack('c', magic_str[i].encode('ascii')))
+    
+    f.write(struct.pack('i', npt))
+
+    content_flags = 0|1 # KPoint = 1
+    channels = [0] * 8
+    channels[0] = 3   
+    ptr_dis = [0] * 8    
+    ptr_dis[0] = 88
+    if len(normals) > 0:
+        content_flags |= 2  # KNormal = 2
+        channels[1] = 3
+    if len(features) > 0:
+        content_flags |= 4  # KFeature = 4
+        channels[2] = len(features[0])
+    if len(labels) > 0:
+        content_flags |= 8  # KLabel = 8
+        channels[3] = 1
+    for i in range(1, 5):
+        ptr_dis[i] = ptr_dis[i-1] + 4 * npt * channels[i-1]
+        
+    f.write(struct.pack('i', content_flags))
+    
+    for i in range(8):
+        f.write(struct.pack('i', channels[i]))
+        
+    for i in range(8):
+        f.write(struct.pack('i', ptr_dis[i]))
+    
+    for p in pts:
+        f.write(struct.pack('f', p[0]))
+        f.write(struct.pack('f', p[1]))
+        f.write(struct.pack('f', p[2]))
+    
+    for n in normals:
+        f.write(struct.pack('f', n[0]))        
+        f.write(struct.pack('f', n[1]))
+        f.write(struct.pack('f', n[2]))
+    
+    for f in features:
+        for item in f:
+            f.write(struct.pack('f', item))
+            
+    for l in labels:
+        f.write(struct.pack('f',l))
+        
+    f.close()
+    return npt
+    
 '''
 input
     filename:   ''
@@ -162,7 +227,6 @@ from OCC.STEPControl import STEPControl_Reader, STEPControl_Writer, STEPControl_
 from OCC.TCollection import TCollection_HAsciiString
 from OCC.STEPConstruct import stepconstruct_FindEntity
 from OCC.StepRepr import Handle_StepRepr_RepresentationItem
-from OCC.BRepPrimAPI import BRepPrimAPI_MakeBox
 from OCC.TopLoc import TopLoc_Location
 
 from occ_utils import set_face
@@ -227,38 +291,5 @@ def shape_with_fid_from_step(filename):
             id_map[f] = nameid
 
     return shape, id_map
-
     
-from OCC.AIS import AIS_ColoredShape
-from OCC.Display.SimpleGui import init_display
-    
-if __name__ == '__main__':
-    # test write
-#    shape = BRepPrimAPI_MakeBox(10, 20, 30).Solid()
-#    filename = 'test_box.step'
-#    fset = set_face(shape)
-#    id_map = {}
-#    fid = 0
-#    for f in fset:
-#        id_map[f] = fid
-#        fid += 1
-#    failed = shape_with_fid_to_step(filename, shape, id_map)
-#    print(failed)
-    
-    # test read
-    filename = 'boss-1(1[triangle2])2(2[sweep])2(2[sweep])3(3[sweep]).step'
-    shape, id_map = shape_with_fid_from_step(filename)
-    sorted_id = [v for k, v in sorted(id_map.items(), key = lambda kv: kv[1])]
-    fset = set_face(shape)
-    print('fset length', len(fset))
-    fset1 = {f for f in id_map}
-    print('fset1 length', len(fset1))
         
-    occ_display, start_occ_display, add_menu, add_function_to_menu = init_display()    
-    occ_display.EraseAll()
-    
-    ais = AIS_ColoredShape(shape)  
-    occ_display.Context.Display(ais.GetHandle())
-    occ_display.View_Iso()
-    occ_display.FitAll()
-    start_occ_display()    

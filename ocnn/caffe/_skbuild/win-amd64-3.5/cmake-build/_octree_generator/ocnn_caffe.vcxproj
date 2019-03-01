@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{605BA4B0-766B-3EDA-9576-86D97969A46C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ocnn_caffe</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ocnn_caffe.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ocnn_caffe</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ocnn_caffe.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ocnn_caffe</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ocnn_caffe.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ocnn_caffe</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ocnn_caffe.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ocnn_caffe</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;USE_LMDB;USE_LEVELDB;CPU_ONLY;USE_OPENCV;CMAKE_WINDOWS_BUILD;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=__declspec(dllimport);GOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport);CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\include;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\boost-1_61;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\include\opencv;F:\wjcao\github\caffe\include;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/caffe -BF:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build/_octree_generator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;F:\wjcao\github\caffe\scripts\build\CaffeConfig.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-release.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config-version.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindZLIB.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-release.cmake;F:\wjcao\github\caffe\scripts\build\CaffeTargets.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/caffe -BF:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build/_octree_generator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;F:\wjcao\github\caffe\scripts\build\CaffeConfig.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-release.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config-version.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindZLIB.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-release.cmake;F:\wjcao\github\caffe\scripts\build\CaffeTargets.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/caffe -BF:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build/_octree_generator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;F:\wjcao\github\caffe\scripts\build\CaffeConfig.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-release.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config-version.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindZLIB.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-release.cmake;F:\wjcao\github\caffe\scripts\build\CaffeTargets.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/caffe -BF:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/caffe/_skbuild/win-amd64-3.5/cmake-build/_octree_generator/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/caffe/cpp/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;F:\wjcao\github\caffe\scripts\build\CaffeConfig.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\gflags-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\lib\cmake\glog\glog-targets-release.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config-version.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-config.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets.cmake;F:\Program Files\Anaconda3\Library\cmake\hdf5-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\lmdb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-config.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\leveldb-targets-release.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config-version.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-config.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindZLIB.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-debug.cmake;C:\Users\2624224\.caffe\dependencies\libraries_v140_x64_py35_1.1.0\libraries\cmake\snappy-targets-release.cmake;F:\wjcao\github\caffe\scripts\build\CaffeTargets.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\_octree_generator\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\cpp\src\lmdb_builder.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\ZERO_CHECK.vcxproj">
+      <Project>{5E0361A1-81F3-3215-ACCF-D4FC70BF7095}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

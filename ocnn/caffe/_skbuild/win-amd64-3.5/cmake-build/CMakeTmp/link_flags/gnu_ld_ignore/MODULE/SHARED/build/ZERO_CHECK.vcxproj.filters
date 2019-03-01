@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\caffe\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\gnu_ld_ignore\MODULE\SHARED\build\CMakeFiles\6f79ee1125c6e8ea5952b4f15bd96633\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{241CBE88-2811-3A44-A832-82AEEF70471D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
