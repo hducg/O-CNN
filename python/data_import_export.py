@@ -18,6 +18,7 @@ import struct
 def point_cloud_from_file(filename, has_label=True):
     f = open(filename,'rb')
     num = struct.unpack('i', f.read(4))[0]
+    print(num)
     pts = []
     for i in range(num):
         x = struct.unpack('f', f.read(4))[0]
