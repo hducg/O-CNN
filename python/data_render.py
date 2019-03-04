@@ -72,7 +72,7 @@ class SegShapeViewer:
             self.face_predicted = {f:label_map[id_map[f]] for f in id_map}
 
         # load point cloud        
-        points_path = self.dataset_dir + '/' + self.points_category + '_points/' + self.shape_names[self.current_index] + '.upgrade.points'
+        points_path = self.dataset_dir + '/' + self.points_category + '_points/' + self.shape_names[self.current_index] + '.points'
         self.points,normals,features,self.points_truth = upgraded_point_cloud_from_file(points_path)
         
         points_predicted_path = self.dataset_dir + '/' + self.points_category + '_points/' + self.shape_names[self.current_index] + self.depth_sep + '.points_predicted'
