@@ -15,7 +15,7 @@ from point_cloud import point_cloud_from_labeled_shape
 
 root_dir = 'D:/Weijuan/dataset/cad/'
 category_name = 'marche'
-num_shapes = 3
+num_shapes = 1
 
 shape_dir = root_dir + category_name + '_shape/'
 points_dir = root_dir + category_name + '_points/'
@@ -63,7 +63,7 @@ def generate_label_files():
         print(labels_path)
         labels = labels_from_file(labels_path)
     
-        label_index_path = octree_dir + shape_name + '.upgrade' + depth_sep + '.label_index'
+        label_index_path = octree_dir + shape_name + depth_sep + '.label_index'
         print(label_index_path)
         label_index = label_index_from_file(label_index_path)
     
