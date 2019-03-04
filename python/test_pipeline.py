@@ -13,8 +13,8 @@ from data_import_export import shape_with_fid_to_step, shape_with_fid_from_step,
 from model_factory import shape_drain
 from point_cloud import point_cloud_from_labeled_shape 
 
-root_dir = 'F:/wjcao/datasets/TestCAD/'
-category_name = 'lundi'
+root_dir = 'D:/Weijuan/dataset/cad/'
+category_name = 'marche'
 num_shapes = 3
 
 shape_dir = root_dir + category_name + '_shape/'
@@ -43,43 +43,7 @@ def generate_paths_file(where, to, suffix):
         for name in names:
             if suffix is not '' and name.find(suffix) is not -1:
                 f.write(prefix + name + '\n')
-    
-                
-def generate_shapes():    
-    for i in range(num_shapes):
-        shape, label_map, id_map, shape_name = shape_drain()
-        
-        step_path = shape_dir + shape_name + '.step'
-        shape_with_fid_to_step(step_path, shape, id_map)
-        
-        face_truth_path = shape_dir + shape_name + '.face_truth'
-        face_truth = [label_map[f] for f, fid in sorted(id_map.items(), key = lambda kv: kv[1])]    
-        with open(face_truth_path, 'wb') as f:
-            pickle.dump(face_truth, f)
 
-        
-def generate_points():
-    shape_list_dir = list_dir + category_name + '_shape.txt'
-    with open(shape_list_dir) as f:
-        shape_dirs = [line.strip() for line in f.readlines()]
-
-    for path in shape_dirs:
-        shape, id_map = shape_with_fid_from_step(path)
-        shape_name = path.split('/')[-1].split('.')[0]
-
-        face_truth_path = shape_dir + shape_name + '.face_truth'
-        with open(face_truth_path, 'rb') as f:
-            face_truth = pickle.load(f)        
-        label_map = {f: face_truth[id_map[f]] for f in id_map}
-                     
-        pts, normals, segs, face_ids = point_cloud_from_labeled_shape(shape, label_map, id_map)
-        file_path = points_dir + shape_name + '.points'
-        point_cloud_to_file(file_path,pts,normals,segs)
-        
-        face_index_path = points_dir + shape_name + '.face_index'
-        with open(face_index_path, 'wb') as f:
-            pickle.dump(face_ids, f)
-            
 
 def generate_label_files():
     octree_list_path = list_dir + category_name + '_octree_shuffle.txt'
@@ -132,14 +96,13 @@ def generate_label_files():
             pickle.dump(face_predicted, f)
                 
         
-upgrade_points = 'F:/wjcao/github/hducg/O-CNN/ocnn/octree/build/Release/upgrade_points.exe'
-octree = 'F:/wjcao/github/hducg/O-CNN/ocnn/octree/build/Release/octree.exe'
-convert_octree_data = ''
-caffe = ''
+octree = 'D:/Weijuan/O-CNN/ocnn/octree/build/Release/octree.exe'
+convert_octree_data = 'D:/Weijuan/caffe/build/tools/Release/convert_octree_data.exe'
+caffe = 'D:/Weijuan/caffe/build/tools/Release/caffe.exe'
 if __name__ == '__main__':   
 #1. filenames, output_path --> octree.exe --> *.octree, *.label_index
-    upgrade_list = list_dir + category_name + '_upgrade.points.txt'
-    subprocess.check_call([octree, '--filenames', upgrade_list, '--output_path', octree_dir, '--depth', '6', '--rot_num', '1'])
+    points_list = list_dir + category_name + '_.points.txt'
+    subprocess.check_call([octree, '--filenames', points_list, '--output_path', octree_dir, '--depth', '6', '--rot_num', '1'])
     generate_paths_file(octree_dir, list_dir, 'octree')
 #2. rootfolder, listfile, db_name --> convert_octree_data --> lmdb, octree_list_name
     if os.path.exists(lmdb_dir):
@@ -148,8 +111,8 @@ if __name__ == '__main__':
     subprocess.check_call([convert_octree_data, root_dir, octree_list, lmdb_dir])
 #3. prototxt, caffemodel --> caffe test --> *.label_groundtruth, *.label_predicted
     blob_prefix = feature_dir
-    model_path = ''
-    weights_path = ''        
+    model_path = 'D:/Weijuan/caffe/examples/o-cnn/segmentation_6_test.prototxt'
+    weights_path = 'D:/Weijuan/caffe/examples/o-cnn/seg_6_cad.caffemodel'        
     subprocess.check_call([caffe, 'test', '--model=' + model_path, '--weights=' + weights_path, '--gpu=0', '--blob_prefix=' + blob_prefix, 
     '--binary_mode=false', '--save_seperately=true', '--iterations=' + str(num_shapes)])    
 #4. generate label files

@@ -168,9 +168,9 @@ ais_context = occ_display.GetContext().GetObject()
 #octree_list_file_name = dataset_dir + category_names[0] + '_octree_names_shuffle.txt'
 
 
-root_path = 'F:/wjcao/datasets/TestCAD'
-category_name = 'lundi'
-list_name = 'lundi_step.txt'
+root_path = 'D:/Weijuan/dataset/cad'
+category_name = 'marche'
+list_name = 'marche_step.txt'
 depth_sep = '_6_2_000'
 
 points_render = SegShapeViewer(root_path, category_name, list_name, depth_sep)

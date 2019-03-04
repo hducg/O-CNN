@@ -11,7 +11,7 @@ from data_import_export import shape_with_fid_to_step, shape_with_fid_from_step,
 from model_factory import shape_drain
 from point_cloud import point_cloud_from_labeled_shape, resolution_from_shape 
 
-root_dir = 'F:/wjcao/datasets/TestCAD/'
+root_dir = 'D:/Weijuan/dataset/cad/'
 category_name = 'marche'
 num_shapes = 1
 
@@ -91,8 +91,5 @@ if __name__ == '__main__':
 
 #2. shape, label_map, id_map --> point_cloud.py --> *.points, *.face_index, *.points_truth    
     generate_points()
-    generate_paths_file(points_dir, list_dir, 'points')
-    
-
-    
+    generate_paths_file(points_dir, list_dir, 'points')     
 
