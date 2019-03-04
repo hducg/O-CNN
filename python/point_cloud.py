@@ -48,13 +48,13 @@ from occ_utils import set_face, get_boundingbox
 #
 #logger = logging.getLogger(__name__)
 
-from OCCUtils.edge import Edge
-def points_from_edge_interior(edge, resolution):
-    # compute edge length and number of sample points
-    edge_len = GCPnts_AbscissaPoint().Length(BRepAdaptor_Curve(edge))
-    N = int(edge_len / resolution)
-    edge_util = Edge(edge)
-    edge_util.divide_by_number_of_points(N)
+#from OCCUtils.edge import Edge
+#def points_from_edge_interior(edge, resolution):
+#    # compute edge length and number of sample points
+#    edge_len = GCPnts_AbscissaPoint().Length(BRepAdaptor_Curve(edge))
+#    N = int(edge_len / resolution)
+#    edge_util = Edge(edge)
+#    edge_util.divide_by_number_of_points(N)
     #                
     
 '''
