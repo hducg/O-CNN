@@ -1,0 +1,1 @@
+{"args": [".\\cmake.CMD", "-DCMAKE_BUILD_TYPE:STRING=Release"], "version": "3.9.3", "environment": {"PYTHONPATH": null, "PYTHONNOUSERSITE": null}}

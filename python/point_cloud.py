@@ -31,12 +31,13 @@ from multiprocessing import Pool
 ##########################
 # OCC library
 ##########################
-from OCC.BRepAdaptor import BRepAdaptor_Surface
+from OCC.BRepAdaptor import BRepAdaptor_Surface, BRepAdaptor_Curve
 from OCC.BRepMesh import BRepMesh_IncrementalMesh
 from OCC.BRep import BRep_Tool, BRep_Tool_Surface
 from OCC.TopLoc import TopLoc_Location
 from OCC.GeomLProp import GeomLProp_SLProps
 from OCC.TopAbs import TopAbs_REVERSED
+from OCC.GCPnts import GCPnts_AbscissaPoint
 
 #==============================================================================
 # local library
@@ -47,7 +48,14 @@ from occ_utils import set_face, get_boundingbox
 #
 #logger = logging.getLogger(__name__)
 
-
+from OCCUtils.edge import Edge
+def points_from_edge_interior(edge, resolution):
+    # compute edge length and number of sample points
+    edge_len = GCPnts_AbscissaPoint().Length(BRepAdaptor_Curve(edge))
+    N = int(edge_len / resolution)
+    edge_util = Edge(edge)
+    edge_util.divide_by_number_of_points(N)
+    #                
     
 '''
 input
@@ -190,6 +198,7 @@ output
 '''
 def triangles_from_shape(shape, resolution):
     tri_pts, tri_uvs, tri_facets, tri_faces = triangulation_from_shape(shape)
+    print('number of traingulation nodes:', len(tri_pts))
     triangles = []
     for i in range(len(tri_facets)):
         t_idx = tri_facets[i]
@@ -219,6 +228,7 @@ def point_cloud_from_labeled_shape(shape, label_map, id_map, resolution=0.1):
     print('point_cloud_from_labeled_shape')
     cloud_pts = []
     cloud_normals = []
+    cloud_feats = []
     cloud_segs = []
     face_ids = []
     triangles = triangles_from_shape(shape, resolution)   
@@ -227,8 +237,9 @@ def point_cloud_from_labeled_shape(shape, label_map, id_map, resolution=0.1):
         cloud_pts += r[0]
         cloud_normals += r[1]        
         cloud_segs += [label_map[r[2]]] * len(r[0])
-        face_ids += [id_map[r[2]]] * len(r[0])            
-    return cloud_pts, cloud_normals, cloud_segs, face_ids
+        face_ids += [id_map[r[2]]] * len(r[0])
+    print('number of points:', len(cloud_pts))            
+    return cloud_pts, cloud_normals, cloud_feats, cloud_segs, face_ids
 
 
 '''
@@ -239,8 +250,7 @@ output
 '''    
 def resolution_from_shape(shape):
     xmin, ymin, zmin, xmax, ymax, zmax, xlen, ylen, zlen = get_boundingbox(shape, use_mesh = False)
-    area = (xlen * ylen + xlen * zlen + ylen * zlen) * 2
-    resolution = math.sqrt(area / 1.0e5)
+    resolution = max(xlen, ylen, zlen) / 256
     
     return resolution        
 

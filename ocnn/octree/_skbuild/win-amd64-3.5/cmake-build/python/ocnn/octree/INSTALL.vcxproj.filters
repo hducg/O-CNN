@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\e288c976f40bb2f4244bcd131d18fea7\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0E63B61C-97AA-3D87-8AE7-34C139BC5F3F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

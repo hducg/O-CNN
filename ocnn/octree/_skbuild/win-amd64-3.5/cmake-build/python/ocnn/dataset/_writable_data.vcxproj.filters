@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\python\ocnn\dataset\_writable_data.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\python\ocnn\dataset\CMakeLists.txt" />
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\30899a89bc5ec1c491852a37a9a12908\_writable_data.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{46486432-BB63-35E3-AAB9-CA3C324E687D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0E63B61C-97AA-3D87-8AE7-34C139BC5F3F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

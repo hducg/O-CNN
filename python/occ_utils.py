@@ -134,4 +134,3 @@ def sample_point(face):
         
     return P, D
         
-        

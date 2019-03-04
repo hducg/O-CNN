@@ -1,0 +1,9 @@
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeFiles/rply.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeFiles/octree_lib.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeFiles/INSTALL.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeFiles/ALL_BUILD.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeFiles/ZERO_CHECK.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/python/ocnn/dataset/CMakeFiles/_writable_data.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/python/ocnn/dataset/CMakeFiles/INSTALL.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/python/ocnn/octree/CMakeFiles/_octree.dir
+F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/python/ocnn/octree/CMakeFiles/INSTALL.dir

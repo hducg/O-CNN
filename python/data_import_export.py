@@ -292,4 +292,6 @@ def shape_with_fid_from_step(filename):
 
     return shape, id_map
     
-        
+if __name__ == '__main__':
+    pts, normals, segs = point_cloud_from_file('D:/Weijuan/dataset/ModelNet40/ModelNet40/airplane/test/airplane_0627.points', False) 
+    print(len(pts))           

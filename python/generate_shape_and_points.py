@@ -9,11 +9,11 @@ import os
 
 from data_import_export import shape_with_fid_to_step, shape_with_fid_from_step, upgraded_point_cloud_to_file, labels_from_file, label_index_from_file        
 from model_factory import shape_drain
-from point_cloud import point_cloud_from_labeled_shape 
+from point_cloud import point_cloud_from_labeled_shape, resolution_from_shape 
 
 root_dir = 'F:/wjcao/datasets/TestCAD/'
 category_name = 'marche'
-num_shapes = 3
+num_shapes = 1
 
 shape_dir = root_dir + category_name + '_shape/'
 points_dir = root_dir + category_name + '_points/'
@@ -48,12 +48,13 @@ def generate_shapes():
         shape, label_map, id_map, shape_name = shape_drain()
         
         step_path = shape_dir + shape_name + '.step'
-        shape_with_fid_to_step(step_path, shape, id_map)
-        
-        face_truth_path = shape_dir + shape_name + '.face_truth'
-        face_truth = [label_map[f] for f, fid in sorted(id_map.items(), key = lambda kv: kv[1])]    
-        with open(face_truth_path, 'wb') as f:
-            pickle.dump(face_truth, f)
+        if not os.path.exists(step_path):
+            shape_with_fid_to_step(step_path, shape, id_map)
+            
+            face_truth_path = shape_dir + shape_name + '.face_truth'
+            face_truth = [label_map[f] for f, fid in sorted(id_map.items(), key = lambda kv: kv[1])]    
+            with open(face_truth_path, 'wb') as f:
+                pickle.dump(face_truth, f)
 
         
 def generate_points():
@@ -62,27 +63,31 @@ def generate_points():
         shape_dirs = [line.strip() for line in f.readlines()]
 
     for path in shape_dirs:
-        shape, id_map = shape_with_fid_from_step(path)
         shape_name = path.split('/')[-1].split('.')[0]
-
+        file_path = points_dir + shape_name + '.points'
+        if os.path.exists(file_path):
+            continue
+        
+        shape, id_map = shape_with_fid_from_step(path)
         face_truth_path = shape_dir + shape_name + '.face_truth'
         with open(face_truth_path, 'rb') as f:
             face_truth = pickle.load(f)        
-        label_map = {f: face_truth[id_map[f]] for f in id_map}
-                     
-        pts, normals, segs, face_ids = point_cloud_from_labeled_shape(shape, label_map, id_map)
-        file_path = points_dir + shape_name + '.points'
-        upgraded_point_cloud_to_file(file_path,pts,normals,[],segs)
+        label_map = {f: face_truth[id_map[f]] for f in id_map}        
+
+        res = resolution_from_shape(shape)
+        print('resolution', res)             
+        pts, normals, feats, segs, face_ids = point_cloud_from_labeled_shape(shape, label_map, id_map, res)
+        upgraded_point_cloud_to_file(file_path,pts,normals,feats,segs)
         
         face_index_path = points_dir + shape_name + '.face_index'
         with open(face_index_path, 'wb') as f:
             pickle.dump(face_ids, f)
-            
+        
        
 if __name__ == '__main__':
 #1. shape_drain --> shape, label_map, id_map, shape_name    
-#    generate_shapes()
-#    generate_paths_file(shape_dir, list_dir, 'step')    
+    generate_shapes()
+    generate_paths_file(shape_dir, list_dir, 'step')    
 
 #2. shape, label_map, id_map --> point_cloud.py --> *.points, *.face_index, *.points_truth    
     generate_points()

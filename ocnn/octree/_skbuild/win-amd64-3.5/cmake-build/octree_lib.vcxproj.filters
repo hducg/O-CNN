@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\marching_cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\marching_cube_table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\octree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\octree_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\octree_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\points.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\src\octree\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\cmd_flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\marching_cube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\octree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\octree_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\octree_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\points.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\include\octree\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{46486432-BB63-35E3-AAB9-CA3C324E687D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8FB68B00-6090-3932-9B78-48F4874EFC78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

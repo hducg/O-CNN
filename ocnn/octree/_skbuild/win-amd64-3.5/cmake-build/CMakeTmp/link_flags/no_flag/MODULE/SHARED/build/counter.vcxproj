@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CE0147F9-49F6-34B2-9D85-71179697D7FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>counter</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">counter.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">counter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">counter.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">counter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">counter.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">counter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">counter.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">counter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/Debug/counter.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/Debug/counter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/Release/counter.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/Release/counter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/MinSizeRel/counter.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/MinSizeRel/counter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";counter_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/RelWithDebInfo/counter.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/RelWithDebInfo/counter.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src -BF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeRCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeRCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src -BF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeRCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeRCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src -BF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeRCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeRCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Program Files\cmake-3.9.3-win64-x64\bin\cmake.exe" -HF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src -BF:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build --check-stamp-file F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/wjcao/github/hducg/O-CNN/ocnn/octree/_skbuild/win-amd64-3.5/cmake-build/CMakeTmp/link_flags/no_flag/MODULE/SHARED/src/CMakeLists.txt;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeFiles\3.9.3\CMakeRCCompiler.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeRCInformation.cmake;F:\Program Files\cmake-3.9.3-win64-x64\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\src\counter.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\no_flag\MODULE\SHARED\build\ZERO_CHECK.vcxproj">
+      <Project>{280F1AB5-375F-3077-9117-D89FE222FDCA}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

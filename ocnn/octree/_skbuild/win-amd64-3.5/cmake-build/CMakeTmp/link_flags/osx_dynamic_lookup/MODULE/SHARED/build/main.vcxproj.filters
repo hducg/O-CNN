@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\osx_dynamic_lookup\MODULE\SHARED\src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\wjcao\github\hducg\O-CNN\ocnn\octree\_skbuild\win-amd64-3.5\cmake-build\CMakeTmp\link_flags\osx_dynamic_lookup\MODULE\SHARED\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E3EBBA5B-1DE9-3C5E-9ABA-B5BD0A31DF0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
