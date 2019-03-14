@@ -337,12 +337,15 @@ void Octree::calc_signal(const Points& point_cloud, const vector<float>& pts_sca
                   std::max_element(avg_label.begin(), avg_label.end())));
     }
 
-	//begin write index in avg_labels_ for each point, wjcao	
-	std::ofstream outfile(label_index_name, std::ios::binary);
-	if (!outfile)
-		std::cout << "cannot open label index file " << std::endl;
-	outfile.write((char*)(label_index.data()), label_index.size() * sizeof(int));
-	outfile.close();	
+	//begin write index in avg_labels_ for each point, wjcao
+	if (!label_index_name.empty())
+	{
+		std::ofstream outfile(label_index_name, std::ios::binary);
+		if (!outfile)
+			std::cout << "cannot open label index file " << std::endl;
+		outfile.write((char*)(label_index.data()), label_index.size() * sizeof(int));
+		outfile.close();
+	}
 	//end write index in avg_labels_ for each point, wjcao
   }
 

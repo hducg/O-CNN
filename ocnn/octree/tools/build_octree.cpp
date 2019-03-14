@@ -137,17 +137,16 @@ int main(int argc, char* argv[]) {
 
     string filename = extract_filename(all_files[i]);
     if (FLAGS_verbose) cout << "Processing: " << filename << std::endl;
-	   
+
+	//wjcao - begin
+	if(FLAGS_rot_num == 1)
+		label_index_name = output_path + filename + ".label_index";
+	//wjcao - end
+
     for (int v = 0; v < FLAGS_rot_num; ++v) {
       // output filename
       char file_suffix[64];
       sprintf(file_suffix, "_%d_%d_%03d.octree", FLAGS_depth, FLAGS_full_depth, v);
-	  
-	  //wjcao - begin
-	  char index_suffix[64];
-	  sprintf(index_suffix, "_%d_%d_%03d.label_index", FLAGS_depth, FLAGS_full_depth, v);
-	  label_index_name = output_path + filename + index_suffix;
-	  //wjcao - end
 
       // build
       builder.build_octree();
